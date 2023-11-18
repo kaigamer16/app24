@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Impresión</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><img src="img/logoweb.png" alt="logo DanJah"></div>
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">DML tips</a></li>
+                    <li><a href="terror.html">Terror</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="imprimir.html">Impreciones</a></li>
+                    <li class="search-box">
+                        <input type="text"id="searchInput"  placeholder="Buscar algo...">
+                        <span class="search-icon" onclick="performSearch()">&#128269;</span>
+                       
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+       
+    </header>
+
+
+
+
+    <div class="impresion">
+    <form id="formulario">
+        <div class="titulo">
+        <h1>Datos de la persona que Envia</h1>
+        </div>
+            
+
+            
+
+
+        <label for="nombre">Nombre y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required oninput="validarFormulario()">
+
+        <label for="dni">Número de DNI:</label>
+        <input type="text" id="dni" name="dni" required oninput="validarFormulario()">
+
+        <label for="destino">Lugar de Destino:</label>
+        <input type="text" id="destino" name="destino" required oninput="validarFormulario()">
+
+        <div class="titulo2">
+        <h2>Datos de la persona que recibe</h2>
+        </div>
+
+        <label for="nombre1">Nombre y Apellidos:</label>
+        <input type="text" id="nombre1" name="nombre1" required oninput="validarFormulario()">
+
+        <label for="comentario">Descripcion del Producto</label><br>
+
+        <textarea name="comentario" id="comentario" cols="40" rows="5" required oninput="validarFormulario"></textarea> <br>
+
+
+
+        <input type="button" value="Imprimir Ficha" onclick="imprimirFormulario()" id="botonImprimir" disabled>
+    </form>
+
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><img src="img/logoweb.png" alt="Logo DanJah"></div>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="icon"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="icon"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-text">
+                &copy; 2023 Mi Blog | Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
