@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2? family= Nunito+Sans:ital,opsz,wght@1,6..12,500 & display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   font-family: 'Nunito Sans', sans-serif;
+  
+}
+
+header {
+   background-color: rgb(2,0,36);
+   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,1,14,1) 35%, rgba(0,212,255,1) 100%);
+   color: #fff;
+   padding: 6px ;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 100;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo img {
+   width: 40px;
+  
+}
+
+.menu-toggle {
+   display: none;
+   cursor: pointer;
+}
+
+.bar {
+   width: 30px;
+   height: 3px;
+   background-color: #fff;
+   margin: 4px 0;
+}
+
+.menu {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ 
+}
+
+.menu li {
+   margin: 0 20px;
+}
+
+.menu a {
+   text-decoration: none;
+   color: #fff;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-weight: bold;
+}
+.menu a:hover {
+    background-color: #12e1b4;
+}
+
+/* Estilos para hacer el menú responsive */
+@media screen and (max-width: 768px) {
+   header {
+      position: sticky;
+      top: 0;
+   }
+   .menu-toggle {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+   }
+
+   .menu {
+       display: none;
+       flex-direction: column;
+       text-align: center;
+       background: rgb(5,133,209);
+       background: linear-gradient(90deg, rgba(5,133,209,1) 1%, rgba(161,12,201,1) 51%, rgba(241,206,2,1) 100%);
+       position: absolute;
+       top: 60px;
+       left: 0;
+       width: 100%;
+       z-index: 1;
+      
+   }
+
+   .menu.show-menu {
+       display: flex;
+   }
+
+   .menu li {
+       margin: 10px 0;
+   }
+   .menu a {
+      text-decoration: none;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+   }
+   .menu a:hover {
+      background-color: #24020b;
+   }
+}
+
+/* estilos al conteiner de blog */
+
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.blog-post {
+   flex-basis: calc(33.33% - 20px);
+   margin: 10px;
+   padding: 20px;
+   border: 1px solid #ddd;
+   text-align: center;
+   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+   background-color: #fff;
+   margin-top: 90px;
+}
+
+.blog-post img {
+   max-width: 100%;
+   height: auto;
+
+}
+.blog-post :hover {
+   transform: scale(1.05); /* Escala el elemento al hacer hover */
+   transition: transform 0.2s ease; /* Agrega una transición suave de 0.3 segundos */
+}
+
+
+.blog-post h2 {
+   font-size: 24px;
+   margin-top: 10px;
+
+}
+
+.blog-post p {
+   font-size: 16px;
+   margin-top: 10px;
+}
+
+.btn {
+   display: inline-block;
+   padding: 10px 20px;
+   background: rgb(131,58,180);
+   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(38,95,216,1) 35%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  
+   color: #000000;
+   text-decoration: none;
+   border-radius: 5px;
+   margin-top: 10px;
+   font-weight: bold;
+}
+
+.btn:hover {
+   background-color: transparent;
+   border: 1px solid rgba(38,95,216,1);
+   color: #fff;
+}
+
+@media (max-width: 768px) {
+   .blog-post {
+       flex-basis: calc(50% - 20px);
+       margin-top: -10px;
+   }
+   .blog-post p {
+      font-size: 12px;
+   }
+
+}
+
+.search-box {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+   padding: 7px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 16px;
+   flex: 1;
+}
+
+.search-box button {
+   padding: 7px 14px;
+   background-color: #138791;
+   color: #fff;
+   text-decoration: none;
+   border: none;
+   border-radius: 5px;
+   margin-left: 10px;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.search-box button:hover {
+   background-color: #ad0a64;
+   border: 2px solid #fff;
+   color: #fff;
+   font-weight: bold;
+}
+/* Estilos para el campo de búsqueda */
+.search-box {
+   position: relative;
+   display: inline-block;
+}
+
+#searchInput {
+   padding-right: 30px; /* Ajusta el espacio para el icono */
+}
+
+.search-icon {
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   transform: translateY(-50%);
+   cursor: pointer;
+   font-size: 18px;
+}
+
+
+/* Est/* Estilos para el pie de página */
+footer {
+   background: rgb(0,0,0);
+   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,28,84,1) 35%, rgba(240,220,28,1) 50%, rgba(252,69,186,1) 100%);
+   color: #fff;
+   padding: 20px 0;
+   text-align: center;
+   bottom: 0;
+   width: 100%;
+}
+
+.footer-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.footer-logo {
+   font-size: 24px;
+   font-weight: bold;
+}
+.footer-logo img {
+   width: 40px;
+}
+
+.social-icons {
+   display: flex;
+   margin: 8px;
+}
+
+.social-icons .icon {
+   margin-right: 10px;
+   color: #fff;
+   font-size: 18px;
+   text-decoration: none;
+}
+
+.social-icons .icon:hover {
+   color: #3498db; /* Color al pasar el ratón por encima */
+}
+
+.footer-text {
+   margin-top: 10px;
+   font-size: 14px;
+}
+
+
+
+ 
+
+
+/* Estilos para el icono FontAwesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Estilos para la sección de galería */
+.image-gallery {
+   background-color: #f2f2f2;
+   padding: 40px 0;
+}
+
+.image-gallery h1 {
+   text-align: center;
+   font-size: 28px;
+   margin-bottom: 20px;
+}
+
+.gallery {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.gallery-item {
+   margin: 10px;
+}
+
+.gallery-item img {
+   max-width: 100%;
+   max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+   width: auto; /* Asegura que la imagen mantenga su relación de aspecto */
+   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+   transition: transform 0.2s;
+}
+
+.gallery-item img:hover {
+   transform: scale(1.1);
+}
+
+
+/* Estilos específicos para la página de terror.html */
+
+.loader-section{
+   width: 100vw;
+   height: 100vh;
+   max-width: 100%;
+   position: fixed;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #ffffff;
+   z-index:999;
+   transition: all 1s 1s ease-out;
+   opacity:1;
+ }
+ .loaded{
+   opacity:0;
+   z-index:-1;
+ }
+   
+ .loader {
+     width: 48px;
+     height: 48px;
+     border: 5px solid #623ddb;
+     border-bottom-color: transparent;
+     border-radius: 50%;
+     display: inline-block;
+     box-sizing: border-box;
+     animation: rotation 1s linear infinite;
+     }
+ 
+ @keyframes rotation {
+     0% {
+         transform: rotate(0deg);
+     }
+     100% {
+         transform: rotate(360deg);
+     }
+ } 
+
+
+
+.content {
+   background-color: #f2f2f2;
+   color: #000000;
+   padding: 40px 0;
+   text-align: center;
+   margin-top: 50px;
+}
+
+.content h1 {
+   font-size: 32px;
+   margin-bottom: 5px;
+}
+.content img {
+   width: 150px;
+   margin-bottom: 10px;
+}
+
+.content p {
+   font-size: 18px;
+   margin-top: 20px;
+   line-height: 1.5; /* Puedes ajustar este valor según tus preferencias */
+}
+
+@media (max-width: 768px) {
+   .content {
+       flex-basis: calc(50% - 20px);
+       margin-top: -10px;
+   }
+   .content p {
+      font-size: 12px;
+      padding: 0 10px;
+   }
+
+   .container h1 {
+      margin-top: 18px;
+      padding: 0 10px;
+   }
+   .container img {
+      margin-top: 18px;
+      padding: 0 10px;
+   }
+}
+
+
+/* ... (código previo) ... */
+
+.reactions {
+   margin-top: 20px;
+   text-align: center;
+}
+
+.like-button, .dislike-button {
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   background-color: #4CAF50; /* Verde para el botón "Me gusta" */
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   margin-right: 10px;
+}
+
+.dislike-button {
+   background-color: #ff0000; /* Rojo para el botón "No me gusta" */
+}
+
+/* ... (Estilos a la pagina de imptrcion) ... */
+
+.impresion {
+   display: block;
+   max-width: 450px;
+   left: 0;
+   right: 0;
+   margin: auto;
+   margin-top: 80px;
+}
+
+.impresion .titulo{
+   background-color: #12e1b4;
+   color: #ddd;
+   border-radius: 5px;
+   font-family: 'Nunito Sans', sans-serif;
+   font-size: 12px;
+   padding: 10px;
+}
+.impresion .titulo h1 {
+   border: 2px solid red;
+   padding: 5px;
+   border-radius: 10px;
+}
+
+.impresion .titulo2 {
+   background-color: #ad0a64;
+   color: #fff;
+   font-weight: bold;
+   padding: 10px;
+}
+
+.impresion label {
+   display: inline-block;
+   font-size: 18px;
+   margin: 8px;
+   font-weight: bold;
+}
+
+.impresion input {
+   max-width: 450px;
+   display: block;
+   height: 40px;
+   margin: 8px;
+   border: none;
+   border-radius: 8px;
+   padding: 0 10px;
+   font-size: 18px;
+   border: 2px solid blueviolet;
+}
+
+#botonImprimir {
+   width: 30%;
+   height: 30px;
+   color: white;
+   font-weight: bold;
+   border: none;
+   border-radius: 5px;
+   background-color: #808080; /* Color por defecto cuando está deshabilitado */
+   color: #fff; /* Color de texto por defecto cuando está deshabilitado */
+   font-family: 'Nunito Sans', sans-serif;
+   cursor: pointer;
+}
+
+#botonImprimir:enabled {
+   width: 30%;
+   height: 30px;
+   background-color: #1877f2;
+   color: white;
+   font-weight: bold;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+
+
